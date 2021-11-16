@@ -1,2 +1,2 @@
-# Python-Basic---PTIT
+# Python-Basic
 Python Basic 
