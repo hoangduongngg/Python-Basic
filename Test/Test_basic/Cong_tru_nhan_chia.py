@@ -1,0 +1,6 @@
+print (5 + 3)
+print (10 - 2)
+print (4*2)
+print (17//2)
+print (17/2)
+print (17%2)
