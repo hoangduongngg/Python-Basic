@@ -1,21 +1,22 @@
-def XuLy(s1, s2):
-    # s1 = s2 = ""
+def Giao_2Xau (s1, s2):
+    s1 = sorted(set(s1.lower().split()))
+    s2 = sorted(set(s2.lower().split()))
 
-    s1 = sorted(s1.lower().split(" "))
-    s2 = sorted(s2.lower().split(" "))
-
-    Hop = s1
-    Hop.extend(s2)
-    print(Hop)
-
-    Giao = []
+    res = []
     for i in s1:
-        if i in s2: Giao.append(i)
-    print(" ".join(Giao))
+        if i in s2: res.append(i)
+    print(" ".join(res))
+
+def Hop_2Xau (s1, s2):
+    # s1 = s2 = ""
+    res = sorted((s1 +" "+ s2).lower().split())
+    res = sorted(set(res))
+    print(" ".join(res))
 
 s1 = input()
 s2 = input()
-XuLy(s1, s2)
+Hop_2Xau(s1, s2)
+Giao_2Xau(s1, s2)
 
 # PY01044 XỬ LÝ XÂU KÝ TỰ
 
@@ -36,8 +37,8 @@ XuLy(s1, s2)
 # Ví dụ
 
 # Input
-# Lap trinh huong doi tuong
-# Ngon ngu lap trinh C++
+# Lap  trinh  huong  doi  tuong
+# Ngon  ngu  lap  trinh  C++
 
 # Output
 
