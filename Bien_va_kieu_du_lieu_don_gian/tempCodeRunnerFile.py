@@ -1,3 +1,4 @@
-    # else:    
-    #     M = int((L+R)/2)
-    #     return Ktra (L, M, n) + Ktra (M, R, n)
+for i in range(0,n):
+    #     for j in range(0,m):
+    #         if a[i][j] == '-1':
+    #             Dict[[i,j]] = 

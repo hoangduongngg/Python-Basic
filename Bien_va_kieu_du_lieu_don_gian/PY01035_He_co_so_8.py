@@ -1,3 +1,4 @@
+# Cách 1 => Xem Cách 2 nhanh hơn bài PYKT038
 import math
 def NhiPhan_Batphan(n):
     while len(n)%3!=0:
