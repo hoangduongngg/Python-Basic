@@ -1,6 +1,7 @@
 def ThongKe (a):
     n = len(a)
     m = len(a[0])
+    res = 0
     b = [] #mang luu trọng số
     for i in range(0,n):
         row = []
@@ -11,12 +12,13 @@ def ThongKe (a):
     for i in range(0,n):
         for j in range(0,m):
             if a[i][j] == '-1':
-                b[i][j] = -1
+                # b[i][j] = -1
                 for k in range(max(0, i-1), min(i+2, n)):
                     for l in range(max(0, j-1), min(j+2, m)):
+                        # if b[k][l] == -1 :
+                        #     res +=1
                         if b[k][l] ==0:
                             b[k][l] = int(a[k][l])
-    res = 0
     for i in range(0,n):
         for j in range(0,m):
             if b[i][j] >0:
@@ -55,3 +57,10 @@ print(ThongKe(a))
 # Output:
 
 #  8
+
+
+# 4 4
+# 1 1 0 1 
+# 2 -1 4 5 
+# 0 0 -1 0 
+# 1 0 2 1

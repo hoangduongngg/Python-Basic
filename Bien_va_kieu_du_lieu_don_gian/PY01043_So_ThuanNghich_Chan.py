@@ -7,8 +7,16 @@ def SoThuanNghich_Chan (n):
 
 def Check(n):
     res = []
-    for i in range(10, n):
+    # Cách này nộp 0.65s
+    for i in range(10, n, 2):
         if SoThuanNghich_Chan(i): res.append(i)
+
+# Cách này nộp 1.05s =)))) mà rõ ràng là nhanh hơn mà nhỉ?
+    # i=10
+    # while i<n:
+    #     if len(str(i))%2==1: i*=10
+    #     if SoThuanNghich_Chan(i): res.append(i)
+    #     i+=2
     print(*res)
     
 t = int(input())
