@@ -1,7 +1,8 @@
 def Run(a,K,N):
     res = []
     if a>=N or K>N:
-        return res.append(-1)
+        res.append(-1)
+        return res
 
     x, y = a//K, N//K
     for i in range(x+1,y+1):
