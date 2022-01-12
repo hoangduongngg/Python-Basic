@@ -1,10 +1,28 @@
 def Run(n,a):
-    
-    return 0
+    p = []
+    res = []
+    for i in range(0, n):
+        if len(p)==0:
+            p.append([a[i], 1])
+            res.append(1)
+        else:
+            if a[i] < p[-1][0]: #top
+                p.append([a[i], 1])
+                res.append(1)
+            else:
+                tmp = 1
+                while a[i] >= p[-1][0]:
+                    tmp += p[-1][1]
+                    p.pop()
+                    if len(p)==0: break
+                p.append([a[i], tmp])
+                res.append(tmp)
+        
+    print(*res)
 t = int(input())
 while t>0:
     n = int(input())
-    a = input()
+    a = [int(i) for i in input().split()]
     Run(n,a)
 
     t-=1
