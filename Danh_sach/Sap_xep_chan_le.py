@@ -3,15 +3,13 @@ def Sap_xep(a,n,b):
     chan = []
     le = []
     for i in a:
-        if int(i)%2==0:
-            chan.append(i)
-        else:
-            le.append(i)
-    chan.sort
+        if i%2==0: chan.append(i)
+        else: le.append(i)
+    chan = sorted(chan)
     le = sorted(le, reverse=True)
     j = k = 0
     for i in a:
-        if int(i)%2==0:
+        if i%2==0:
             res.append(chan[j])
             j+=1
         else:
@@ -32,7 +30,7 @@ n = int (input())
 a = []
 b = [] #luu so luong so tung dong
 while len(a)<n:
-    lists = input().split()
+    lists = [int(i) for i in input().split()]
     a.extend(lists)
     b.append(len(lists))
 
