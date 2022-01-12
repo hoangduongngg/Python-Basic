@@ -1,4 +1,3 @@
-
 def NhiPhan_BatPhan (s):
     if len(s)%3!=0:
         s = (3-len(s)%3)*'0' + s
