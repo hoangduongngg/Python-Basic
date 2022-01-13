@@ -1,9 +1,7 @@
 import re
 def ThongKe(s):
-    # covert to word
-    ktdb = re.compile('\W') #\W: all ky tu A->z ,0-9
-    s = re.sub(ktdb, ' ', s.lower()) #thay ktdb = " "
-    words = s.split() 
+    # covert to word list
+    words = re.findall(r'[a-zA-Z]+', s)
 
     # add dict to list 
     dif_words = []
@@ -27,4 +25,4 @@ ThongKe (s)
 # 3
 # PTIT duy tri hoc phi on dinh nam 2019 va khong tang trong nam 2020-2021 va 2021-2022!
 # Khi dich benh xuat hien PTIT trich hon 6 ty dong ho tro sinh vien PTIT
-# voi muc ho tro 500000 dong/sinh vien PTIT D20.
+# voi muc ho tro 500000 dong/sinh vien PTIT D20A.

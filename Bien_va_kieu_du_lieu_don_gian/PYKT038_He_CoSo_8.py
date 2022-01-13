@@ -5,7 +5,6 @@ def NhiPhan_BatPhan (s):
     res = ""
     for i in range(0, len(a)-2,3):
         res += str(a[i]*4 + a[i+1]*2 + a[i+2])
-
     return res
 
 print(NhiPhan_BatPhan(input()))
