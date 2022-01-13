@@ -1,5 +1,4 @@
 def Xuly (s):
-    # s = ""
     res = []
     ktdb = ['.', '?', '!']
     s.lower()
@@ -15,9 +14,7 @@ def Xuly (s):
         res[i] = " ".join(res[i].split())
         res[i] = res[i].capitalize()
         print(res[i])
-    # print(res)
-
-# s = input()   
+   
 s = ""
 while 1:
     try:
