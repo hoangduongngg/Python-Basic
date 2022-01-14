@@ -1,6 +1,5 @@
 from datetime import datetime
 
-
 class Gamer:
     def __init__(self, Ma, Ten, Time_In, Time_Out) -> None:
         self.Ma = Ma

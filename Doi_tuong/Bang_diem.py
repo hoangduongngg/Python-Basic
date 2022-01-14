@@ -2,7 +2,7 @@ from decimal import Decimal
 class HocSinh:
     def __init__(self, stt, TenHS, DS_Diem):
         self.MaHS = "HS" + "{0:02d}".format(stt)
-        self.TenHS = TenHS
+        self.TenHS = TenHS.strip()
         self.DS_Diem = DS_Diem
         self.DiemTB = self.Xuly_DiemTB()
         self.XepLoai = self.Xuly_XepLoai()
