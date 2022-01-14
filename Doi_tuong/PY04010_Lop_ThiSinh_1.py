@@ -11,11 +11,11 @@ class ThiSinh:
     def Tinh_Tong_Diem (self):
         return self.Diem1 + self.Diem2 + self.Diem3
     
-    def toString(self):
+    def __str__(self) -> str:
         return "{} {} ".format(self.TenSV, self.DOB) + "{0:.1f}".format(self.TongDiem)
 
 ts = ThiSinh (input(), input(),input(),input(),input())
-print(ts.toString())
+print(ts)
 
 # Input
 
