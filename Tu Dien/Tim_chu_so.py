@@ -20,7 +20,9 @@ t = int(input())
 for i in range(1, t+1):
     print(f"Case #{i}: {Xuly(int(input()))}")
 
+# Lỗi đang gặp: Không xử lý đc số lớn 
 # Idea: Chuyển sang str
+
 # PYKT13006 TÌM CHỮ SỐ
 
 # Bài làm tốt nhất
