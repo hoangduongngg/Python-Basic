@@ -1,6 +1,4 @@
 from decimal import Decimal
-
-
 class ThiSinh:
     def __init__(self, Ten, CC, BTL, CK) -> None:
         self.Ten = Ten
@@ -9,8 +7,7 @@ class ThiSinh:
         self.CK = Decimal(CK)
 
     def TinhTB (self):
-        res = self.CC * Decimal(0.1) + self.BTL *Decimal(0.3) + self.CK * Decimal(0.6)
-        return res
+        return self.CC * Decimal(0.1) + self.BTL *Decimal(0.3) + self.CK * Decimal(0.6)
     def __str__(self) -> str:
         return self.Ten + " " + "%.1f"%self.TinhTB()
 

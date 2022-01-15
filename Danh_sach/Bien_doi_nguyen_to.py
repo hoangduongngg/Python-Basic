@@ -23,3 +23,6 @@ for i in a:
             if list_NT[j] < i < list_NT[j+1]:
                 res += min( i-list_NT[j], list_NT[j+1]-i)
 print(res)
+
+# 8
+# 13 5 8 7 9 15 26 34

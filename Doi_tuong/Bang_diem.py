@@ -10,7 +10,11 @@ class HocSinh:
     def Xuly_DiemTB (self):
         a = [Decimal(i) for i in self.DS_Diem.split()]
         DiemTB =  (sum(a) + a[0] + a[1])/(len(a)+2)
-        return Decimal('%.1f'%DiemTB)
+        # return DiemTB
+        return float('%.1f'%DiemTB)
+        # return Decimal('%.1f'%DiemTB)
+        # return round(DiemTB, 1)
+        # return Decimal('{0:.1f}'.format(DiemTB))
 
     def Xuly_XepLoai (self):
         if self.DiemTB >=9: return "XUAT SAC"
@@ -20,8 +24,8 @@ class HocSinh:
         return "YEU"
     
     def __str__(self):
-        return '{} {} {} {}'.format(self.MaHS, self.TenHS, self.DiemTB, self.XepLoai)
-    
+        # return '{} {} {} {}'.format(self.MaHS, self.TenHS, self.DiemTB, self.XepLoai)
+        return self.MaHS + " " + self.TenHS + " " + '%.1f'%self.DiemTB + " " + self.XepLoai
 
 t = int(input())
 ds = []
