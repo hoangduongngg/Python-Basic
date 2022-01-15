@@ -1,4 +1,4 @@
-class Hoadon():
+class HoaDon():
     def __init__(self,stt,ten,cu,moi):
         self.MaKH = "KH" +"{0:02d}".format(stt)        
         self.ten = ten
@@ -27,9 +27,9 @@ class Hoadon():
 t = int(input())
 ds = []
 for i in range(0, t):
-    ds.append(Hoadon(i+1,input(),int(input()),int(input())))
-sorted_ds = sorted(ds, key=lambda k:-k.ThanhTien)
-for i in sorted_ds:
+    ds.append(HoaDon(i+1,input(),int(input()),int(input())))
+
+for i in sorted(ds, key=lambda k:-k.ThanhTien):
     print(i)
 
 # 3

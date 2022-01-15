@@ -24,7 +24,7 @@
 # with open (file_name, 'a') as file_object:
 #     file_object.write("123")
 
-#bai 1:
+# bai 1:
 # file_name = 'guest.txt'
 # with open (file_name, 'a') as file_object:
 #     while 1:
@@ -32,7 +32,7 @@
 #         if name == "quit": break
 #         file_object.write(name + '\n')
 
-#bai 2:
+# # bai 2:
 # file_name = 'responses.txt'
 # with open (file_name, 'a') as file_object:
 #     while 1:
@@ -41,10 +41,10 @@
 #         file_object.write(str + '\n')
 
 
-import json
-dict = {1:'a', 2:'b', 3:'c'}
-#dict = dict(sorted(dict.items()))
+# import json
+# dict = {1:'a', 2:'b', 3:'c'}
+# #dict = dict(sorted(dict.items()))
 
-filename = 'dict.json'
-with open (filename, 'w') as f:
-    json.dump(dict, f, indent=4, sort_keys=True)
+# filename = 'dict.json'
+# with open (filename, 'w') as f:
+#     json.dump(dict, f, indent=4, sort_keys=True)
