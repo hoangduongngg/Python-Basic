@@ -1,7 +1,9 @@
 import re
 def ThongKe(s):
     # covert to word list
-    words = re.findall(r'[a-zA-Z]+', s)
+    ktdb = re.compile('\W') #\W: all ky tu trừ A->z ,0-9
+    s = re.sub(ktdb, ' ', s.lower()) #thay ktdb = " "
+    words = re.findall(r'[a-zA-Z]+', s) #tách thành list các từ chỉ chưa chữ, không chứa số
 
     # add dict to list 
     dif_words = []

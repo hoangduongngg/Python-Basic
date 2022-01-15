@@ -1,7 +1,7 @@
 import re
 def ThongKe(s):
     # covert to word
-    ktdb = re.compile('\W') #\W: all ky tu A->z ,0-9
+    ktdb = re.compile('\W') #\W: all ky tu trừ A->z ,0-9
     s = re.sub(ktdb, ' ', s.lower()) #thay ktdb = " "
     words = s.split() 
 

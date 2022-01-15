@@ -1,6 +1,3 @@
-from sys import flags
-
-
 def Xuly(s):
     a = s.split()
     n = len(a)
