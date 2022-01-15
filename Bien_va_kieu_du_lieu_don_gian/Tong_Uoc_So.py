@@ -1,22 +1,39 @@
-def Tong_Uoc_So (n):
+import math
+def Tong_thuaso (n):
+    # if n==1: return 1
+    dic = {}
+    if n%2==0:
+        dic[2] = 0
+        while n%2==0:
+            dic[2]+=1
+            n = int(n/2)
+    for i in range(3,int(math.sqrt(n))+1, 2):
+        if n%i==0:
+            dic[i] = 0
+            while n%i==0:
+                dic[i]+=1
+                n = int(n/i)
+    if n!=1: dic[n] =1
+
     res = 0
-    while n%2==0:
-        res+=2
-        n/=2
-    i = 3
-    while i<=n:
-        while n%i==0:
-            res+=i
-            n/=i
-        i+=2
+    for i in dic:
+        res += i*dic.get(i)
+    return res
+
+def Xuly(a):
+    res = 0
+    for i in a:
+        res += Tong_thuaso(i)
     return res
 
 t = int(input())
-Tong_Uoc = 0
+a = []
 while t>0:
-    Tong_Uoc += Tong_Uoc_So(int(input()))
+    n = int(input())
+    a.append(n)
     t-=1
-print(Tong_Uoc)
+
+print(Xuly(a))
 
 # PY01074 TỔNG ƯỚC SỐ
 
@@ -34,5 +51,6 @@ print(Tong_Uoc)
 # 10 
 # 13 
 # 100
+
 # Output:
 # 47

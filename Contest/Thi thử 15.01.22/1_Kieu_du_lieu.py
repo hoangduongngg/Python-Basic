@@ -15,7 +15,6 @@ def Tong_thuaso (n):
                 n = int(n/i)
     if n!=1: dic[n] =1
 
-    dic = {}
     res = 0
     for i in dic:
         res += i*dic.get(i)
